@@ -32,10 +32,21 @@
     <main>
        
         <form action="">
-            <h3>Contactanos</h3>
-            <input type="textbox" placeholder="Escribe tu comentario">
+            <label for="name">Nombre: </label>
+            <input type="tex" placeholder="Escribe tu nombre">
+            <br>
+            <label for="email">Email: </label>
+            <input type="email"  placeholder="Escribre tu e-mail">
+            <br>
+            <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
+            <br>
+            <select name="Tipo de mensaje" id="">
+                <option value="Reservas">Reservas</option>
+                <option value="Alquiler de salon">Alquiler de salon</option>
+                <option value="karaoke">karaoke</option>
+            </select>
             <input type="reset" value="Reset">
-            <input type="button" value="submit">
+            <input type="submit" value="Enviar">
         </form>
     </main>
     <footer>
