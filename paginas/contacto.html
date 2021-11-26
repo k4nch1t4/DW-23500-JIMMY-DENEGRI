@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/58ac14c3bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estilos/contacto.css">
     <title>Sazon internacional</title>
 </head>
 <body>
     <header>
-        <img src="./../img/logo.png" alt="logo">
-        <nav>
+    <div class="menu">
+        <div class="menu__logo">
+            <a href="#"></a>
+            <img src="../img/logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="menu__navegacion">
             <ul>
                 <li>
-                    <a href="./../index.html">Inicio</a>
+                    <a href="../index.html">Inicio</a>
                 </li>
                 <li>
                     <a href="./nosotros.html">Nosotros</a>
@@ -28,33 +35,71 @@
                 </li>
             </ul>
         </nav>
+        <div class="menu__redes">
+            <a href="">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+        </div>
+    </div>
     </header>
     <main>
-       
-        <form action="">
-            <label for="name">Nombre: </label>
-            <input type="tex" placeholder="Escribe tu nombre">
-            <br>
-            <label for="email">Email: </label>
-            <input type="email"  placeholder="Escribre tu e-mail">
-            <br>
-            <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
-            <br>
-            <select name="Tipo de mensaje" id="">
-                <option value="Reservas">Reservas</option>
-                <option value="Alquiler de salon">Alquiler de salon</option>
-                <option value="karaoke">karaoke</option>
-            </select>
-            <input type="reset" value="Reset">
-            <input type="submit" value="Enviar">
-        </form>
+        <section class="contacto">
+            <div class="contacto__caja">
+                <div class="contacto__info">
+                    <h3>Escribenos</h3>
+                    <p>email@gmail.com</p>
+                </div>
+                <div class="contacto__info">
+                    <h3>Visitanos</h3>
+                    <p>Calle 123</p>
+                </div>
+                <div class="contacto__info">
+                    <h3>Horario</h3>
+                    <p>Lunes a viernes</p>
+                </div>
+            </div>
+            <div class="contacto__formulario">
+                <form action="">
+                    <label for="name">Nombre: </label>
+                    <input type="tex" placeholder="Escribe tu nombre">
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email"  placeholder="Escribre tu e-mail">
+                    <br>
+                    <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
+                    <br>
+                    <select name="Tipo de mensaje" id="">
+                        <option value="Reservas">Reservas</option>
+                        <option value="Alquiler de salon">Alquiler de salon</option>
+                        <option value="karaoke">karaoke</option>
+                    </select>
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>Todos los derechos reservados</p>
-        <img src="./../recursos/facebook-square-brands (1).svg" alt="" width="22px">
-        <img src="./../recursos/twitter-brands.svg" alt="" width="22px">
-        <img src="./../recursos/instagram-brands.svg" alt="" width="22px">
-
+        <div class="footer__redes">
+            <p>Todos los derechos reservados</p>
+            <div class="footer__iconos">
+                <a href="">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 
 </body>

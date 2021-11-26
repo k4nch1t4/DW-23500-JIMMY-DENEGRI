@@ -4,41 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/58ac14c3bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estilos/menu.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-    <img src="./../img/logo.png" alt="logo">
-    <nav>
-        <ul>
-            <li>
-                <a href="./../index.html">Inicio</a>
-            </li>
-            <li>
-                <a href="./nosotros.html">Nosotros</a>
-            </li>
-            <li>
-                <a href="./nuestro-chef.html">Nuestro Chef</a>
-            </li>
-            <li>
-                <a href="./menu.html">Menú</a>
-            </li>
-            <li>
-                <a href="./contacto.html">Contacto</a>
-            </li>
-        </ul>
-    </nav>
-   
+        <div class="menu">
+            <div class="menu__logo">
+                <a href="#"></a>
+                <img src="../img/logo.png" alt="logo">
+                </a>
+            </div>
+            <nav class="menu__navegacion">
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="./nuestro-chef.html">Nuestro Chef</a>
+                    </li>
+                    <li>
+                        <a href="./menu.html">Menú</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu__redes">
+                <a href="">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </div>
+        </div>
+
     </header>
     <main>
+        <section class="carta">
+            <div class="carta__texto">
+                <h2>Nuestro menu</h2>
+                <ul>
+                    <li>
+                        <a href="">Postre</a>
+                    </li>
+                    <li>
+                        <a href="">Cafes</a>
+                    </li>
+                </ul>
+        
+            </div>
+            <div class="carta__lista">
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+            </div>
+        </section>
 
         
     </main>
     <footer>
-        <p>Todos los derechos reservados</p>
-        <img src="./../recursos/facebook-square-brands (1).svg" alt="" width="22px">
-        <img src="./../recursos/twitter-brands.svg" alt="" width="22px">
-        <img src="./../recursos/instagram-brands.svg" alt="" width="22px">
+        <div class="footer__redes">
+            <p>Todos los derechos reservados</p>
+            <div class="footer__iconos">
+                <a href="">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
