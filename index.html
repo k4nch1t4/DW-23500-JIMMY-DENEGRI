@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./estilos/style.css">
-    <script src="https://kit.fontawesome.com/58ac14c3bc.js" crossorigin="anonymous"></script>
     <title>sazon internacional</title>
 </head>
 <body>
     <header>
         <div class="menu">
             <div class="menu__logo">
-                <a href="#"><img src="./img/logo.png" alt="logo"></a>
+                <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
             </div>
             <nav class="menu__navegacion">
                 <ul>
@@ -20,13 +20,13 @@
                         <a href="./index.html">Inicio</a>
                     </li>
                     <li>
-                        <a href="#1">Nosotros</a>
+                        <a href="#portadaId">Nosotros</a>
                     </li>
                     <li>
-                        <a href="./paginas/nuestro-chef.html">Nuestro Chef</a>
+                        <a href="#chefId">Nuestro Chef</a>
                     </li>
                     <li>
-                        <a href="./paginas/menu.html">Menú</a>
+                        <a href="#cartaId">Menú</a>
                     </li>
                     <li>
                         <a href="./paginas/contacto.html">Contacto</a>
@@ -51,7 +51,7 @@
 
             <!-- portada -->
 
-            <section class="portada">
+            <section class="portada" id="portadaId">
                 <div class="colum__izquierda">
                     <div class="colum__izquierda--foto">
                         <img class="foto__izquierda" src="./img/marqquin-Chh5iTKMPJo-unsplash.jpg" alt="Postre">
@@ -88,7 +88,7 @@
 
             <!-- Seccion de nosotros -->
 
-            <section class="nosotros" id="1">
+            <section class="nosotros" id="nosotrosId">
                 <div class="nosotros__conocenos">
                     <h2>Nosotros</h2>
                     <p id="texto">Conócenos</p>
@@ -110,7 +110,7 @@
 
             <!-- nuestro chef -->
 
-            <section class="nuestroChef">
+            <section class="nuestroChef" id="chefId">
                 <div class="nuestroChef__img">
                     <img id="chef" src="./img/jason-leung--eKZLpj7U0E-unsplash.jpg" alt="">
                 </div>
@@ -127,17 +127,15 @@
 
             <!-- Nuestro menu -->
 
-            <section class="carta">
+            <section class="carta" id="cartaId">
                 <div class="carta__texto">
                     <h2>Nuestro menu</h2>
-                    <ul>
-                        <li>
-                            <a href="">Postre</a>
-                        </li>
-                        <li>
-                            <a href="">Cafes</a>
-                        </li>
-                    </ul>
+                    <div class="carta__nav">
+                        
+                        <a href="" class="carta__link">Postre</a>
+                        <a href="" class="carta__link">Cafes</a>
+                    
+                    </div>
             
                 </div>
                 <div class="carta__lista">
@@ -156,7 +154,7 @@
 
             <!-- Contactanos -->
 
-            <section class="contacto">
+            <section class="contacto" id="contactoId">
                 <div class="contacto__caja">
                     <div class="contacto__info">
                         <h3>Escribenos</h3>
@@ -172,27 +170,57 @@
                     </div>
                 </div>
                 <div class="contacto__formulario">
-                    <form action="">
-                        <label for="name">Nombre: </label>
-                        <input type="tex" placeholder="Escribe tu nombre">
-                        <br>
-                        <label for="email">Email: </label>
-                        <input type="email" placeholder="Escribre tu e-mail">
-                        <br>
-                        <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
-                        <br>
-                        <select name="Tipo de mensaje" id="">
-                            <option value="Reservas">Reservas</option>
-                            <option value="Alquiler de salon">Alquiler de salon</option>
-                            <option value="karaoke">karaoke</option>
-                        </select>
-                        <input type="reset" value="Reset">
-                        <input type="submit" value="Enviar">
+                    <form class="row gy-2 gx-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="visually-hidden" for="autoSizingInput">Nombre</label>
+                            <input type="text" class="form-control" id="autoSizingInput" placeholder="Escriba su nombre">
+                        </div>
+                        <div class="col-auto">
+                            <label class="visually-hidden" for="autoSizingInputGroup">Correo electronico</label>
+                            <div class="input-group">
+                                <div class="input-group-text">@</div>
+                                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <label class="visually-hidden" for="autoSizingSelect">Tipo</label>
+                            <select class="form-select" id="autoSizingSelect">
+                                <option selected>Ocasion</option>
+                                <option value="1">Reserva</option>
+                                <option value="2">Karaoke</option>
+                                <option value="3">Salon</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                <label class="form-check-label" for="autoSizingCheck">
+                                    Aceptar terminos y condiciones
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
                     </form>
                 </div>
             </section>
 
             <!-- fin de contactanos -->
+
+            <!-- Script -->
+
+            <script src="https://kit.fontawesome.com/58ac14c3bc.js" crossorigin="anonymous"></script>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
 
     </main>
     <footer>

@@ -16,10 +16,11 @@
 }
 
 .menu__logo{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
-    padding: 20px;
+    align-items: center;
+    padding: 30px;
 }
 
 nav ul li{
@@ -222,25 +223,42 @@ p{
 /* menu */
 
 .carta{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    height: 800px;
     margin: 60px;
+    display: grid;
+    grid-template-areas:
+        ". texto ." 
+        ". lista ."
+        ". lista ."
+        ". lista ."
+        ". lista .";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    
 }
 
 .carta__texto{
-    width: 50%;
+    grid-area: texto;
+    background-color: #ffffff;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 
+.carta__nav{
+    height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
 
+.carta__link{
+    margin: 15px;
+}
 
 .carta__lista{
-    width: 660px;
-    height: 700px;
+    grid-area: lista;
     background-color: rgb(255, 255, 255);
     border: inset 5px rgb(97, 97, 97);
     display: flex;
@@ -260,7 +278,7 @@ p{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    
+    margin-bottom: 50px;
 }
 
 
@@ -295,9 +313,11 @@ p{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
+    align-items: center;
     color: black;
+    padding: 50px;
 }
 
 /* fin de contactanos */
