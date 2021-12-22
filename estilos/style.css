@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
 }
 
 /* Encabezado */
@@ -10,18 +11,30 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 100px;
     background-color: #ffffff;
 }
 
 .menu__logo{
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     display: flex;
-    padding: 30px;
+    padding: 20px;
 }
 
 nav ul li{
     display: inline;
+}
+
+li{
+    font-size: 15px;
+    padding: 20px;
+    transition: font-size 0.6s, transform 0.6s;
+}
+
+li:hover{
+    font-size: 25px;
+    color: rgb(50, 199, 31);
 }
 
 nav{
@@ -113,6 +126,182 @@ nav{
 }
 
 /* fin de portada */
+
+/* conocenos */
+
+.nosotros{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 60px;
+}
+
+
+.nosotros__conocenos{
+    width: 410px;
+    height: 363px;
+    border: inset 5px rgb(228, 228, 228);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 80px;
+}
+
+.nosotros__texto{
+    background-color: #ffffff;
+    width: 680px;
+    height: 368px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 30px 150px;
+}
+
+h2{
+    font-family: sans-serif;
+    font-size: 15PX;
+    font-weight: normal;
+}
+
+#texto{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* fin de conocenos */
+
+/* seccion nuestro chef */
+
+.nuestroChef{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#chef{
+    width: 435px;
+    height: 435px;
+}
+
+.nuestroChef__img{
+    padding: 70px;
+}
+
+.nuestroChef__texto{
+    width: 540px;
+    height: 540px;
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #ffffff;
+}
+
+h2{
+    font-family: 'Bellefair', serif;
+    font-size: 30px;
+}
+
+p{
+    font-weight: lighter;
+    font-size: 16px;
+    font-family:'Bellefair', serif;
+}
+
+/* fin de nuestro chef */
+
+/* menu */
+
+.carta{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 60px;
+}
+
+.carta__texto{
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.carta__lista{
+    width: 660px;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    border: inset 5px rgb(97, 97, 97);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    justify-items: center;
+    padding: 30px;
+}
+
+/* fin de menu */
+
+/* contactanos */
+
+.contacto{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+}
+
+
+.contacto__caja{
+    height: 430px;
+    width: 1127.200px;
+    background-image: url(../img/pexels-anna-tis-10156916.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contacto__info{
+    width: 220px;
+    height: 150px;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.contacto__formulario{
+    width: 620px;
+    height: 260px;
+    border: inset 2px rgb(56, 37, 0);
+    background-color: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    color: black;
+}
+
+/* fin de contactanos */
+
 
 /* footer */
 
