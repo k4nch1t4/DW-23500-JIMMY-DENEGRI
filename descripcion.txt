@@ -1,0 +1,15 @@
+Para esta pagina adicione:
+
+-keywords : internacional, sazon, comida, reserva, restaurant
+
+-Description : la mejor sazon internacional en un solo lugar
+
+-Media queries
+
+-mixin
+
+-maps
+
+-extend
+
+se modifico algunas etiquetas <H> para darle jerarquizacion a la pagina 

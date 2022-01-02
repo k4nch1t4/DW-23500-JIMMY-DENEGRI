@@ -1,9 +1,31 @@
+$titulo: 'Great Vibes', cursive;
+$parrafo: 'Gideon Roman', cursive;
+
+@mixin letra($estilo, $size) {
+    font-family: $estilo;
+    font-size: $size;
+}
+
+$colores: (
+    titulo: #FFFFFF,
+    parrafo: #F2F2F2,
+);
+
+@each $valor, $color in $colores {
+    .color--#{$valor} {
+        color: $color;
+    }
+}
+
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
 }
+
+
 
 
 /* Encabezado */
@@ -14,15 +36,27 @@
     width: 100%;
     height: 100px;
     background-color: #ffffff;
+    position: relative;
+
+    &__logo{
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+
+    &__redes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        padding-right: 70px;
+    }
+
 }
 
-.menu__logo{
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 30px;
-}
+
 
 nav ul li{
     display: inline;
@@ -45,13 +79,6 @@ nav{
     align-items: center;
 }
 
-.menu__redes{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 150px;
-    padding-right: 70px;
-}
 
 
 /* Fin de encabezado */
@@ -64,8 +91,9 @@ nav{
 #portadaId{
     display: flex;
     flex-flow: row wrap;
+    font-size: 16px;
     width: 100%;
-    height: 720px;
+    height: 45em;
     background-color: #0D0C0C;
 }
 
@@ -86,7 +114,15 @@ nav{
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
-        padding: 50px;
+        padding: 3.125em;
+
+            & h2{
+                @include letra($titulo, 2em)
+            }
+
+            & p{
+                @include letra($parrafo, 1em)
+            }
     }
         &__foto{
         grid-area: img1;
@@ -135,7 +171,16 @@ nav{
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
-        padding: 50px;
+        padding: 3.125em;
+
+            & h2{
+                @include letra($titulo, 2em)
+            }
+
+            & p{
+                @include letra($parrafo, 1em)
+            }
+
     }
         &__foto{
         grid-area: img4;
@@ -149,6 +194,65 @@ nav{
 }
 
 
+@media screen and (max-width: 1024px){
+    #portadaId{
+        font-size: 12.5px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    #portadaId{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        height: 600px;
+    }
+
+        .colum__izquierda{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            height: 50%;
+
+            &__foto{
+                width: 35%;
+            }
+
+            &__texto{
+                width: 65%;
+            }
+
+                &__fotofull{
+                    &__imagen2{
+                        display: none;
+                    }
+                }
+        }
+
+        .colum__derecha{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            height: 50%;
+
+            &__texto{
+                width: 65%;
+            }
+
+            &__foto{
+                width: 35%;
+            }
+
+            &__fotofull{
+                &__imagen3{
+                    display: none;
+                }
+            }
+        }
+    
+}
+
 // fin de portada
 
 /* conocenos */
@@ -158,7 +262,7 @@ nav{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin: 60px;
+    padding: 60px;
 
         &__conocenos{
             width: 410px;
@@ -172,16 +276,14 @@ nav{
             justify-content: space-evenly;
             padding: 80px;
 
-            h2{
-            font-family: sans-serif;
-            font-size: 15PX;
+            h3{
+            @include letra($titulo, 1.6em)
             font-weight: normal;
         }
 
             #texto{
-            font-family: 'Open Sans', sans-serif;
-            font-size: 30px;
-            font-weight: bold;
+            @include letra($parrafo, 2em)
+            
         }
 
 
@@ -195,6 +297,10 @@ nav{
             justify-content: center;
             align-content: center;
             padding: 30px 150px;
+
+            & p{
+                @include letra($parrafo, 1em)
+            }
     }
     
 }
@@ -231,15 +337,12 @@ nav{
         justify-content: space-evenly;
         color: #ffffff;
 
-            h2{
-            font-family: 'Bellefair', serif;
-            font-size: 30px;
+            h3{
+            @include letra($titulo, 2.4em)
         }
 
             p{
-            font-weight: lighter;
-            font-size: 16px;
-            font-family:'Bellefair', serif;
+            @include letra($parrafo, 1em)
         }
     }
 }
@@ -268,6 +371,10 @@ nav{
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
+            
+            & h3{
+                @include letra($titulo, 2.7em)
+            }
     }
 
         &__nav{
@@ -308,7 +415,7 @@ nav{
 
         &__caja{
         height: 430px;
-        width: 1127.200px;
+        width: 100%;
         background-image: url(../img/pexels-anna-tis-10156916.jpg);
         background-position: center;
         background-size: cover;
@@ -326,6 +433,16 @@ nav{
         flex-flow: column wrap;
         align-content: center;
         justify-content: center;
+
+            &__lugar{
+                @extend .contacto__info;
+                border-style: dotted;
+            }
+
+            &__horario{
+                @extend .contacto__info;
+                border-radius: 10%;
+            }
     }
 
 
