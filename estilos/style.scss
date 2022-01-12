@@ -17,12 +17,14 @@ $colores: (
     }
 }
 
+body{
+    padding-top: 100px;
+}
 
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
 
@@ -30,54 +32,82 @@ $colores: (
 
 /* Encabezado */
 
+
+
 .menu{
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
     width: 100%;
     height: 100px;
     background-color: #ffffff;
-    position: relative;
+    top: 0;
+    left: 0;
+    
+
 
     &__logo{
         width: 80px;
         height: 80px;
         display: flex;
         align-items: center;
-        padding: 30px;
     }
+
+    &__nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+
+        &__list{
+            display: flex;
+            list-style: none;
+        }
+
+        &__item{
+            font-size: 16px;
+            margin: 0px 10px;
+        }
+
+        &__link{
+            padding: 6px 10px;
+            border-radius: 3px;
+            color: #000000;
+        }
+
+        &__link:hover{
+            background-color: rgb(43, 40, 40) ;
+            color: #f1f1f1;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        &__toggle{
+            color: #000000;
+            background: none;
+            border: none;
+            font-size: 25px;
+            padding: 0px 20px;
+            display: none;
+        }
+
+    }
+
 
     &__redes{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         width: 150px;
-        padding-right: 70px;
+        padding-right: 0px;
+
+        &__icono{
+            color: #000000;
+        }
     }
 
 }
 
 
-
-nav ul li{
-    display: inline;
-}
-
-li{
-    font-size: 15px;
-    padding: 20px;
-    transition: font-size 0.6s, transform 0.6s;
-}
-
-li:hover{
-    font-size: 25px;
-    color: rgb(50, 199, 31);
-}
-
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 
@@ -86,6 +116,7 @@ nav{
 
 
 // portada
+
 
 
 #portadaId{
@@ -194,14 +225,296 @@ nav{
 }
 
 
-@media screen and (max-width: 1024px){
-    #portadaId{
-        font-size: 12.5px;
+
+
+
+// fin de portada
+
+/* conocenos */
+
+.nosotros{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    font-size: 16px;
+    padding: 3.75em;
+
+        &__conocenos{
+            width: 25.63em;
+            height: 22.68em;
+            border: inset 5px rgb(228, 228, 228);
+            border-radius: 2%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 5em;
+
+            h3{
+            @include letra($titulo, 1.6em)
+        }
+
+            #texto{
+            @include letra($parrafo, 2em)
+            
+        }
+
+
+    }
+        &__texto{
+            background-color: #ffffff;
+            width: 42.5em;
+            height: 23em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            padding: 1.875em 9.375em;
+
+            & p{
+                @include letra($parrafo, 1em)
+            }
+    }
+    
+}
+
+
+/* fin de conocenos */
+
+/* seccion nuestro chef */
+
+.nuestroChef{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 16px;
+
+        &__img{
+        padding: 4.375em;
+
+            #chef{
+            width: 27.1875em;
+            height: 27.1875em;
+            border-radius: 2%;
+        }
+
+    }
+
+        &__texto{
+        width: 33.75em;
+        height: 33.75em;
+        padding: 5.625em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: #ffffff;
+
+            h3{
+            @include letra($titulo, 2.4em)
+        }
+
+            p{
+            @include letra($parrafo, 1em)
+        }
+    }
+}
+
+/* fin de nuestro chef */
+
+/* menu */
+
+.carta{
+    height: 50em;
+    margin: 3.75em;
+    display: grid;
+    grid-template-areas:
+        ". texto ." 
+        ". lista ."
+        ". lista ."
+        ". lista ."
+        ". lista .";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+
+        &__texto{
+        grid-area: texto;
+        background-color: #ffffff;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+            
+            & h3{
+                @include letra($titulo, 2.7em)
+            }
+    }
+
+        &__nav{
+        height: 5em;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+
+        &__link{
+        margin: 0.9375em;
+        color: #000000;
+    }
+
+        &__lista{
+        grid-area: lista;
+        background-color: rgb(255, 255, 255);
+        border: inset 0.3125em rgb(97, 97, 97);
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        justify-items: center;
+        padding: 1.875em;
+        border-radius: 2%;
     }
 }
 
 
+/* fin de menu */
+
+/* contactanos */
+
+.contacto{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 3.125em;
+
+        &__caja{
+        height: 26.875em;
+        width: 100%;
+        background-image: url(../img/pexels-anna-tis-10156916.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+        &__info{
+        width: 13.75em;
+        height: 9.375em;
+        background-color: #ffffff;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: center;
+        border-radius: 10%;
+
+    }
+
+
+        &__formulario{
+        width: 38.75em;
+        height: 16.25em;
+        border: inset 0.125em rgb(56, 37, 0);
+        background-color: #f1f1f1;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        color: black;
+        padding: 3.125em;
+    }
+}
+
+
+
+
+/* fin de contactanos */
+
+
+/* footer */
+
+.footer__redes{
+    height: 6.25em;
+    background-color: #0D0C0C;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #ffffff;
+    padding: 0.9375em;
+}
+
+
+.footer__iconos{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+
+// medias queries
+
+
+@media screen and (max-width: 1024px){
+    #portadaId{
+        font-size: 12px;
+    }
+    #nosotrosId{
+        font-size: 12px;
+        }
+    #chefId{
+        font-size: 12px;
+    }
+    #cartaId{
+        font-size: 12px;
+    }
+    #contactoId{
+        font-size: 12px;
+    }    
+}
+
+
 @media screen and (max-width: 768px){
+// menu de navegacion
+
+.menu{
+    height: 90px;
+    
+
+
+    &__logo{
+        width: 70px;
+        height: 70px;
+    }
+
+    &__nav{
+
+        &__item{
+            font-size: 13px;
+            margin: 0px 10px;
+        }
+
+
+    }
+
+
+    &__redes{
+        display: none;
+    }
+
+}
+
+// portada
+
     #portadaId{
         display: flex;
         flex-flow: column nowrap;
@@ -253,114 +566,177 @@ nav{
     
 }
 
+
+@media screen and (max-width: 576px){
+    body{
+        padding-top: 70px;
+    }
+    // nav
+    .menu__nav__list-visible{
+                left: 0;
+            }
+
+
+    .menu{
+    height: 70px;
+    
+
+    &__logo{
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+
+        &__list{
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #000000;
+            color: #FFFFFF;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            margin-left: 0;
+            width: 100%;
+            height: calc(100% - 60px);
+            overflow-y: auto;
+
+            left: 100%;
+            transition: left 0.3s;
+
+        
+        }
+
+        &__item{
+            font-size: 16px;
+            margin: 0px 10px;
+        }
+
+        &__link{
+            padding: 6px 10px;
+            border-radius: 3px;
+            color: #ffffff;
+            line-height: 70px;
+        }
+
+        &__link:hover{
+            background: none;
+            color: #d1cbcb;
+        }
+
+        &__toggle{
+            color: #000000;
+            background: none;
+            border: none;
+            font-size: 25px;
+            padding: 0px 20px;
+            display: block;
+        }
+
+    }
+
+
+    &__redes{
+        display: none;
+    }
+
+    // fin de nav
+
+    // portada
+    #portadaId{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        height: 450px;
+        font-size: 10px;
+    }
+
+        .colum__izquierda{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            height: 50%;
+
+            &__foto{
+                width: 35%;
+            }
+
+            &__texto{
+                width: 65%;
+            }
+
+                &__fotofull{
+                    &__imagen2{
+                        display: none;
+                    }
+                }
+        }
+
+        .colum__derecha{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            height: 50%;
+
+            &__texto{
+                width: 65%;
+            }
+
+            &__foto{
+                width: 35%;
+            }
+
+            &__fotofull{
+                &__imagen3{
+                    display: none;
+                }
+            }
+        }
+    
+
+}
+
 // fin de portada
 
-/* conocenos */
+// conocenos
 
-.nosotros{
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: 60px;
+#nosotrosId{
+        font-size: 10px;
 
-        &__conocenos{
-            width: 410px;
-            height: 363px;
-            border: inset 5px rgb(228, 228, 228);
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-evenly;
-            padding: 80px;
+        .nosotros__texto{
+            padding: 4em;
 
-            h3{
-            @include letra($titulo, 1.6em)
-            font-weight: normal;
-        }
-
-            #texto{
-            @include letra($parrafo, 2em)
             
-        }
-
-
-    }
-        &__texto{
-            background-color: #ffffff;
-            width: 680px;
-            height: 368px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            padding: 30px 150px;
-
-            & p{
-                @include letra($parrafo, 1em)
+            &__parrafo{
+                font-size: 0.85em;
             }
-    }
-    
-}
-
-
-/* fin de conocenos */
-
-/* seccion nuestro chef */
-
-.nuestroChef{
-    background-color: black;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-        &__img{
-        padding: 70px;
-
-            #chef{
-            width: 435px;
-            height: 435px;
         }
 
     }
 
-        &__texto{
-        width: 540px;
-        height: 540px;
-        padding: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        color: #ffffff;
+    // fin de conocenos
 
-            h3{
-            @include letra($titulo, 2.4em)
-        }
+    // carta
 
-            p{
-            @include letra($parrafo, 1em)
-        }
-    }
-}
-
-/* fin de nuestro chef */
-
-/* menu */
-
-.carta{
-    height: 800px;
-    margin: 60px;
+    .carta{
+    font-size: 10px;
+    height: 50em;
+    margin: 1em;
     display: grid;
     grid-template-areas:
         ". texto ." 
-        ". lista ."
-        ". lista ."
-        ". lista ."
-        ". lista .";
+        "lista lista lista"
+        "lista lista lista"
+        "lista lista lista"
+        "lista lista lista";
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
 
@@ -378,111 +754,52 @@ nav{
     }
 
         &__nav{
-        height: 80px;
+        height: 5em;
         display: flex;
         flex-flow: row wrap;
         align-content: center;
     }
 
         &__link{
-        margin: 15px;
+        margin: 0.9375em;
+        color: #000000;
     }
 
         &__lista{
         grid-area: lista;
         background-color: rgb(255, 255, 255);
-        border: inset 5px rgb(97, 97, 97);
+        border: inset 0.3125em rgb(97, 97, 97);
         display: flex;
         flex-flow: column wrap;
         justify-content: space-around;
         align-content: space-around;
         justify-items: center;
-        padding: 30px;
+        padding: 1.875em;
+        border-radius: 2%;
+
+        & h4{
+            @include letra($titulo, 2em);
+        }
+
+        & p{
+            @include letra($parrafo, 1em);
+        }
     }
 }
 
+// fin de carta
 
-/* fin de menu */
+// contacto
 
-/* contactanos */
+#contactoId{
+        font-size: 8px;
+    }    
 
-.contacto{
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    margin-bottom: 50px;
-
-        &__caja{
-        height: 430px;
-        width: 100%;
-        background-image: url(../img/pexels-anna-tis-10156916.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-        &__info{
-        width: 220px;
-        height: 150px;
-        background-color: #ffffff;
-        display: flex;
-        flex-flow: column wrap;
-        align-content: center;
-        justify-content: center;
-
-            &__lugar{
-                @extend .contacto__info;
-                border-style: dotted;
-            }
-
-            &__horario{
-                @extend .contacto__info;
-                border-radius: 10%;
-            }
-    }
+// fin de contacto
 
 
-        &__formulario{
-        width: 620px;
-        height: 260px;
-        border: inset 2px rgb(56, 37, 0);
-        background-color: #f1f1f1;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        color: black;
-        padding: 50px;
-    }
+
 }
 
 
 
-
-/* fin de contactanos */
-
-
-/* footer */
-
-.footer__redes{
-    height: 100px;
-    background-color: #0D0C0C;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #ffffff;
-    padding: 15px;
-}
-
-
-.footer__iconos{
-    display: flex;
-    flex-flow: row wrap;
-}

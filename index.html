@@ -16,238 +16,249 @@
 <body>
     <header>
         <div class="menu">
-            <div class="menu__logo">
-                <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
-            </div>
-            <nav class="menu__navegacion">
-                <ul>
-                    <li>
-                        <a href="./index.html">Inicio</a>
+            <nav class="menu__nav">
+                <a href="#" class="menu__logoLink"><img src="./img/logo.png" alt="logo" class="menu__logo"></a>
+                <button class="menu__nav__toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu__nav__list">
+                    <li class="menu__nav__item">
+                        <a href="./index.html" class="menu__nav__link">Inicio</a>
                     </li>
-                    <li>
-                        <a href="#portadaId">Nosotros</a>
+                    <li class="menu__nav__item">
+                        <a href="#portadaId" class="menu__nav__link">Nosotros</a>
                     </li>
-                    <li>
-                        <a href="#chefId">Nuestro Chef</a>
+                    <li class="menu__nav__item">
+                        <a href="#chefId" class="menu__nav__link">Nuestro Chef</a>
                     </li>
-                    <li>
-                        <a href="#cartaId">Menú</a>
+                    <li class="menu__nav__item">
+                        <a href="#cartaId" class="menu__nav__link">Menú</a>
                     </li>
-                    <li>
-                        <a href="./paginas/contacto.html">Contacto</a>
+                    <li class="menu__nav__item">
+                        <a href="#contactoId" class="menu__nav__link">Contacto</a>
                     </li>
                 </ul>
+                <div class="menu__redes">
+                    <a class="menu__redes__icono" href="">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a class="menu__redes__icono" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="menu__redes__icono" href="">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </div>
             </nav> 
-            <div class="menu__redes">
-                <a href="">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-                <a href="">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="">
-                    <i class="fab fa-twitter-square"></i>
-                </a>
-            </div>
         </div>
     </header>
-    <main>
-        <section class="main">
 
-            <!-- portada -->
+    <section class="main">
 
-                <section class="portada" id="portadaId">
-                    <div class="colum__izquierda">
-                        <div class="colum__izquierda__foto">
-                            <img class="colum__izquierda__foto__imagen1" src="./img/marqquin-Chh5iTKMPJo-unsplash.jpg" alt="Postre">
-                        </div>
-                        <div class="colum__izquierda__texto">
-                            <h2 class="color--titulo">Mejor calidad</h2>
-                            <p class="color--parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a convallis tellus, non eleifend lectus.
-                                Vivamus nibh
-                                felis, gravida vitae aliquam vel, tempus sed elit. Class aptent taciti sociosqu ad litora torquent per
-                                conubia nostra,
-                                per inceptos himenaeos.</p>
-                        </div>
-                        <div class="colum__izquierda__fotofull">
-                            <img class="colum__izquierda__fotofull__imagen2" src="./img/scott-greer-81yZExqt-J8-unsplash.jpg" alt="">
-                        </div>
+        <!-- portada -->
+
+            <section class="portada" id="portadaId">
+                <div class="colum__izquierda">
+                    <div class="colum__izquierda__foto">
+                        <img class="colum__izquierda__foto__imagen1" src="./img/marqquin-Chh5iTKMPJo-unsplash.jpg" alt="Postre">
                     </div>
-                    <div class="colum__derecha">
-                        <div class="colum__derecha__fotofull">
-                            <img class="colum__derecha__fotofull__imagen3" src="./img/michaela-baum-VnM6_liIRJ0-unsplash.jpg" alt="">
-                        </div>
-                        <div class="colum__derecha__foto">
-                            <img class="colum__derecha__foto__imagen4" src="./img/hamide-jafari-84qvBiHrWgg-unsplash.jpg" alt="">
-                        </div>
-                        <div class="colum__derecha__texto">
-                            <h2 class="color--titulo">Mejor calidad</h2>
-                            <p class="color--parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a convallis tellus, non eleifend lectus.
-                                Vivamus
-                                nibh
-                                felis, gravida vitae aliquam vel, tempus sed elit. Class aptent taciti sociosqu ad litora torquent per
-                                conubia
-                                nostra,
-                                per inceptos himenaeos.</p>
-                        </div>
+                    <div class="colum__izquierda__texto">
+                        <h2 class="color--titulo">Mejor calidad</h2>
+                        <p class="color--parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a convallis tellus, non eleifend lectus.
+                            Vivamus nibh
+                            felis, gravida vitae aliquam vel, tempus sed elit. Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra,
+                            per inceptos himenaeos.</p>
                     </div>
-                </section>
-
-            <!-- Fin de portada -->
-
-            <!-- Seccion de nosotros -->
-
-            <section class="nosotros" id="nosotrosId">
-                <div class="nosotros__conocenos">
-                    <h3>Nosotros</h3>
-                    <p id="texto">Conócenos</p>
+                    <div class="colum__izquierda__fotofull">
+                        <img class="colum__izquierda__fotofull__imagen2" src="./img/scott-greer-81yZExqt-J8-unsplash.jpg" alt="">
+                    </div>
                 </div>
-                <div class="nosotros__texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis nisl nec lorem molestie
-                        tristique.
-                        Donec
-                        tincidunt, metus nec volutpat efficitur, turpis erat lacinia felis, at fermentum erat felis at tortor.
-                        Praesent a lacus
-                        mi. Nullam suscipit, dolor quis fringilla pulvinar, ipsum metus tempor ipsum, quis pulvinar ex ex luctus
-                        lacus.
-                        Phasellus non efficitur dui. Duis varius elit sed finibus egestas. Phasellus vitae mattis justo, eu accumsan
-                        nunc.
-                    </p>
+                <div class="colum__derecha">
+                    <div class="colum__derecha__fotofull">
+                        <img class="colum__derecha__fotofull__imagen3" src="./img/michaela-baum-VnM6_liIRJ0-unsplash.jpg" alt="">
+                    </div>
+                    <div class="colum__derecha__foto">
+                        <img class="colum__derecha__foto__imagen4" src="./img/hamide-jafari-84qvBiHrWgg-unsplash.jpg" alt="">
+                    </div>
+                    <div class="colum__derecha__texto">
+                        <h2 class="color--titulo">Mejor calidad</h2>
+                        <p class="color--parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a convallis tellus, non eleifend lectus.
+                            Vivamus
+                            nibh
+                            felis, gravida vitae aliquam vel, tempus sed elit. Class aptent taciti sociosqu ad litora torquent per
+                            conubia
+                            nostra,
+                            per inceptos himenaeos.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Fin de seccion nosotros -->
+        <!-- Fin de portada -->
 
-            <!-- nuestro chef -->
+        <!-- Seccion de nosotros -->
 
-            <section class="nuestroChef" id="chefId">
-                <div class="nuestroChef__img">
-                    <img id="chef" src="./img/jason-leung--eKZLpj7U0E-unsplash.jpg" alt="chef">
-                </div>
-                <div class="nuestroChef__texto">
-                    <h3>Nuestro Chef</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare turpis leo, at iaculis eros
-                        rhoncus vitae.</p>
-                    <p>Ut leo nulla, mollis ut venenatis nec, viverra sit amet velit. Donec molestie, sapien a
-                        scelerisque condimentum, nulla ex elementum dolor, eu congue ex orci sed justo.</p>
-                </div>
-            </section>
-
-            <!-- Fin de seccion nuestro chef -->
-
-            <!-- Nuestro menu -->
-
-            <section class="carta" id="cartaId">
-                <div class="carta__texto">
-                    <h3>Nuestro menu</h3>
-                    <div class="carta__nav">
-                        
-                        <a href="" class="carta__link">Postre</a>
-                        <a href="" class="carta__link">Cafes</a>
-                    
-                    </div>
-            
-                </div>
-                <div class="carta__lista">
-                    <h4>Lorem ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
-                    <h4>Lorem ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
-                    <h4>Lorem ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
-                    <h4>Lorem ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
-                </div>
-            </section>
-
-            <!-- Fin de menu -->
-
-            <!-- Contactanos -->
-
-            <section class="contacto" id="contactoId">
-                <div class="contacto__caja">
-                    <div class="contacto__info">
-                        <h5>Escribenos</h5>
-                        <p>email@gmail.com</p>
-                    </div>
-                    <div class="contacto__info__lugar">
-                        <h5>Visitanos</h5>
-                        <p>Calle 123</p>
-                    </div>
-                    <div class="contacto__info__horario">
-                        <h5>Horario</h5>
-                        <p>Lunes a viernes</p>
-                    </div>
-                </div>
-                <div class="contacto__formulario">
-                    <form class="row gy-2 gx-3 align-items-center">
-                        <div class="col-auto">
-                            <label class="visually-hidden" for="autoSizingInput">Nombre</label>
-                            <input type="text" class="form-control" id="autoSizingInput" placeholder="Escriba su nombre">
-                        </div>
-                        <div class="col-auto">
-                            <label class="visually-hidden" for="autoSizingInputGroup">Correo electronico</label>
-                            <div class="input-group">
-                                <div class="input-group-text">@</div>
-                                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="E-mail">
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <label class="visually-hidden" for="autoSizingSelect">Tipo</label>
-                            <select class="form-select" id="autoSizingSelect">
-                                <option selected>Ocasion</option>
-                                <option value="1">Reserva</option>
-                                <option value="2">Karaoke</option>
-                                <option value="3">Salon</option>
-                            </select>
-                        </div>
-                        <div class="col-auto">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                                <label class="form-check-label" for="autoSizingCheck">
-                                    Aceptar terminos y condiciones
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-
-            <!-- fin de contactanos -->
-
-            <!-- Script -->
-
-            <script src="https://kit.fontawesome.com/58ac14c3bc.js" crossorigin="anonymous"></script>
-
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
-
-    </main>
-    <footer>
-        <div class="footer__redes">
-            <p>Todos los derechos reservados</p>
-            <div class="footer__iconos">
-                <a href="">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-                <a href="">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="">
-                    <i class="fab fa-twitter-square"></i>
-                </a>
+        <section class="nosotros" id="nosotrosId">
+            <div class="nosotros__conocenos">
+                <h3>Nosotros</h3>
+                <p id="texto">Conócenos</p>
             </div>
-        </div>
-    </footer>
+            <div class="nosotros__texto">
+                <p class="nosotros__texto__parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis nisl nec lorem molestie
+                    tristique.
+                    Donec
+                    tincidunt, metus nec volutpat efficitur, turpis erat lacinia felis, at fermentum erat felis at tortor.
+                    Praesent a lacus
+                    mi. Nullam suscipit, dolor quis fringilla pulvinar, ipsum metus tempor ipsum, quis pulvinar ex ex luctus
+                    lacus.
+                    Phasellus non efficitur dui. Duis varius elit sed finibus egestas. Phasellus vitae mattis justo, eu accumsan
+                    nunc.
+                </p>
+            </div>
+        </section>
+
+        <!-- Fin de seccion nosotros -->
+
+        <!-- nuestro chef -->
+
+        <section class="nuestroChef" id="chefId">
+            <div class="nuestroChef__img">
+                <img id="chef" src="./img/jason-leung--eKZLpj7U0E-unsplash.jpg" alt="chef">
+            </div>
+            <div class="nuestroChef__texto">
+                <h3>Nuestro Chef</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare turpis leo, at iaculis eros
+                    rhoncus vitae.</p>
+                <p>Ut leo nulla, mollis ut venenatis nec, viverra sit amet velit. Donec molestie, sapien a
+                    scelerisque condimentum, nulla ex elementum dolor, eu congue ex orci sed justo.</p>
+            </div>
+        </section>
+
+        <!-- Fin de seccion nuestro chef -->
+
+        <!-- Nuestro menu -->
+
+        <section class="carta" id="cartaId">
+            <div class="carta__texto">
+                <h3>Nuestro menu</h3>
+                <div class="carta__nav">
+                    
+                    <a href="" class="carta__link">Postre</a>
+                    <a href="" class="carta__link">Cafes</a>
+                
+                </div>
+        
+            </div>
+            <div class="carta__lista">
+                <h4>Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+                <h4>Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+                <h4>Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+                <h4>Lorem ipsum dolor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sapien sed imperdiet luctus.</p>
+            </div>
+        </section>
+
+        <!-- Fin de menu -->
+
+        <!-- Contactanos -->
+
+        <section class="contacto" id="contactoId">
+            <div class="contacto__caja">
+                <div class="contacto__info">
+                    <h5>Escribenos</h5>
+                    <p>email@gmail.com</p>
+                </div>
+                <div class="contacto__info">
+                    <h5>Visitanos</h5>
+                    <p>Calle 123</p>
+                </div>
+                <div class="contacto__info">
+                    <h5>Horario</h5>
+                    <p>Lunes a viernes</p>
+                </div>
+            </div>
+            <div class="contacto__formulario">
+                <form class="row gy-2 gx-3 align-items-center">
+                    <div class="col-auto">
+                        <label class="visually-hidden" for="autoSizingInput">Nombre</label>
+                        <input type="text" class="form-control" id="autoSizingInput" placeholder="Escriba su nombre">
+                    </div>
+                    <div class="col-auto">
+                        <label class="visually-hidden" for="autoSizingInputGroup">Correo electronico</label>
+                        <div class="input-group">
+                            <div class="input-group-text">@</div>
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <label class="visually-hidden" for="autoSizingSelect">Tipo</label>
+                        <select class="form-select" id="autoSizingSelect">
+                            <option selected>Ocasion</option>
+                            <option value="1">Reserva</option>
+                            <option value="2">Karaoke</option>
+                            <option value="3">Salon</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                            <label class="form-check-label" for="autoSizingCheck">
+                                Aceptar terminos y condiciones
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- fin de contactanos -->
+
+        <!-- footer -->
+
+        <footer>
+            <div class="footer__redes">
+                <p>Todos los derechos reservados</p>
+                <div class="footer__iconos">
+                    <a class="footer__link" href="">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a class="footer__link" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="footer__link" href="">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- fin de footer -->
+
+    </section>
+
+
+        <!-- Script -->
+
+        <script src="https://kit.fontawesome.com/58ac14c3bc.js" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+
+    
+
 </body>
 </html>
