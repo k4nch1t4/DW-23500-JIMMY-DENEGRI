@@ -572,9 +572,7 @@ body{
         padding-top: 70px;
     }
     // nav
-    .menu__nav__list-visible{
-                left: 0;
-            }
+    
 
 
     .menu{
@@ -613,6 +611,7 @@ body{
             transition: left 0.3s;
 
         
+        
         }
 
         &__item{
@@ -648,6 +647,10 @@ body{
         display: none;
     }
 
+    .visible{
+        left: 0;
+    }
+}    
     // fin de nav
 
     // portada
@@ -799,7 +802,7 @@ body{
 
 
 
-}
+
 
 
 

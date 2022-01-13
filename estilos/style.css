@@ -439,7 +439,8 @@ body {
 .carta__lista {
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: lista;
   background-color: white;
   border: inset 0.3125em #616161;
@@ -663,9 +664,6 @@ body {
   body {
     padding-top: 70px;
   }
-  .menu__nav__list-visible {
-    left: 0;
-  }
   .menu {
     height: 70px;
   }
@@ -738,7 +736,10 @@ body {
   .menu__redes {
     display: none;
   }
-  .menu #portadaId {
+  .menu .visible {
+    left: 0;
+  }
+  #portadaId {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -750,7 +751,7 @@ body {
     height: 450px;
     font-size: 10px;
   }
-  .menu .colum__izquierda {
+  .colum__izquierda {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -761,16 +762,16 @@ body {
     width: 100%;
     height: 50%;
   }
-  .menu .colum__izquierda__foto {
+  .colum__izquierda__foto {
     width: 35%;
   }
-  .menu .colum__izquierda__texto {
+  .colum__izquierda__texto {
     width: 65%;
   }
-  .menu .colum__izquierda__fotofull__imagen2 {
+  .colum__izquierda__fotofull__imagen2 {
     display: none;
   }
-  .menu .colum__derecha {
+  .colum__derecha {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -781,108 +782,120 @@ body {
     width: 100%;
     height: 50%;
   }
-  .menu .colum__derecha__texto {
+  .colum__derecha__texto {
     width: 65%;
   }
-  .menu .colum__derecha__foto {
+  .colum__derecha__foto {
     width: 35%;
   }
-  .menu .colum__derecha__fotofull__imagen3 {
+  .colum__derecha__fotofull__imagen3 {
     display: none;
   }
-  #nosotrosId {
-    font-size: 10px;
-  }
-  #nosotrosId .nosotros__texto {
-    padding: 4em;
-  }
-  #nosotrosId .nosotros__texto__parrafo {
-    font-size: 0.85em;
-  }
-  .carta {
-    font-size: 10px;
-    height: 50em;
-    margin: 1em;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: ". texto ."  "lista lista lista" "lista lista lista" "lista lista lista" "lista lista lista";
-    -ms-grid-columns: 1fr 3fr 1fr;
-        grid-template-columns: 1fr 3fr 1fr;
-    -ms-grid-rows: 1fr 2fr 2fr 2fr 2fr;
-        grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
-  }
-  .carta__texto {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: texto;
-    background-color: #ffffff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .carta__texto h3 {
-    font-family: "Great Vibes", cursive;
-    font-size: 2.7em;
-  }
-  .carta__nav {
-    height: 5em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  .carta__link {
-    margin: 0.9375em;
-    color: #000000;
-  }
-  .carta__lista {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: lista;
-    background-color: white;
-    border: inset 0.3125em #616161;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
-    justify-items: center;
-    padding: 1.875em;
-    border-radius: 2%;
-  }
-  .carta__lista h4 {
-    font-family: "Great Vibes", cursive;
-    font-size: 2em;
-  }
-  .carta__lista p {
-    font-family: "Gideon Roman", cursive;
-    font-size: 1em;
-  }
-  #contactoId {
-    font-size: 8px;
-  }
+}
+
+#nosotrosId {
+  font-size: 10px;
+}
+
+#nosotrosId .nosotros__texto {
+  padding: 4em;
+}
+
+#nosotrosId .nosotros__texto__parrafo {
+  font-size: 0.85em;
+}
+
+.carta {
+  font-size: 10px;
+  height: 50em;
+  margin: 1em;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". texto ."  "lista lista lista" "lista lista lista" "lista lista lista" "lista lista lista";
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-rows: 1fr 2fr 2fr 2fr 2fr;
+      grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+}
+
+.carta__texto {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: texto;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carta__texto h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.7em;
+}
+
+.carta__nav {
+  height: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.carta__link {
+  margin: 0.9375em;
+  color: #000000;
+}
+
+.carta__lista {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: lista;
+  background-color: white;
+  border: inset 0.3125em #616161;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  justify-items: center;
+  padding: 1.875em;
+  border-radius: 2%;
+}
+
+.carta__lista h4 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2em;
+}
+
+.carta__lista p {
+  font-family: "Gideon Roman", cursive;
+  font-size: 1em;
+}
+
+#contactoId {
+  font-size: 8px;
 }
 /*# sourceMappingURL=style.css.map */
