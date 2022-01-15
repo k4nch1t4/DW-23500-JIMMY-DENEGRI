@@ -515,6 +515,11 @@ body {
   border-radius: 10%;
 }
 
+.contacto__info h5 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.2em;
+}
+
 /* fin de contactanos */
 /* footer */
 .footer__redes {
@@ -641,8 +646,8 @@ body {
     height: 70px;
   }
   .menu__logo {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -857,6 +862,9 @@ body {
   }
   #contactoId {
     font-size: 8px;
+  }
+  #chefId {
+    font-size: 7.5px;
   }
 }
 /*# sourceMappingURL=style.css.map */
