@@ -378,6 +378,10 @@ body{
         justify-items: center;
         padding: 1.875em;
         border-radius: 2%;
+
+            & h4{
+                @include letra($parrafo, 2.2em);
+            }
     }
 }
 
@@ -769,7 +773,7 @@ body{
         border-radius: 2%;
 
         & h4{
-            @include letra($titulo, 2em);
+            @include letra($parrafo, 1.8em);
         }
 
         & p{

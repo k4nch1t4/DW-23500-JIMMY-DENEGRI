@@ -459,6 +459,11 @@ body {
   border-radius: 2%;
 }
 
+.carta__lista h4 {
+  font-family: "Gideon Roman", cursive;
+  font-size: 2.2em;
+}
+
 /* fin de menu */
 /* contactanos */
 .contacto {
@@ -853,8 +858,8 @@ body {
     border-radius: 2%;
   }
   .carta__lista h4 {
-    font-family: "Great Vibes", cursive;
-    font-size: 2em;
+    font-family: "Gideon Roman", cursive;
+    font-size: 1.8em;
   }
   .carta__lista p {
     font-family: "Gideon Roman", cursive;
